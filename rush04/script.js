@@ -24,7 +24,7 @@ $(document).ready(function() {
     });
 
     var options = {
-        strings: ['Hobbyist Programmer', 'Part-time Gamer', 'Dreamer'],
+        strings: ['Adventurer', 'Future Billionair', 'Dreamer'],
         typeSpeed: 200,
         backSpeed: 100,
         loop: true
