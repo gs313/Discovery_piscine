@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>To do or not to do</title>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="To do list" />
+    <meta name="keywords" content="HTML,CSS,JavaScript" />
+    <meta name="author" content="thliangs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+        }
+        
+        .close:hover {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        #ft_list>div {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            background: #eee;
+            font-size: 18px;
+            transition: 0.2s;
+        }
+        
+        input {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            width: 75%;
+            padding: 10px;
+            float: left;
+            font-size: 16px;
+        }
+        
+        .addBtn {
+            padding: 10px;
+            width: 25%;
+            background: #d9d9d9;
+            color: #555;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+        }
+        
+        .addBtn:hover {
+            background-color: #bbb;
+        }
+        
+        .input {
+            background-color: #105fb4;
+            padding: 30px 40px;
+            color: white;
+            text-align: center;
+        }
+        
+        .input:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <script src="todo.js"></script>
+</head>
+
+<body onload="checkCookie()">
+    <div class="input">
+        <h2>TO DO OR NOT TO DO</h2>
+        <input type="text" value="" id="newtask" />
+        <span class="addBtn" onclick="addtask()">NEW</span>
+    </div>
+    <div id="ft_list">
+    </div>
+</body>
+
+</html>

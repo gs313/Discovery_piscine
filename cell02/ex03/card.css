@@ -1,0 +1,46 @@
+h1,
+p,
+#contact,
+h3 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    /* box-shadow: 1px 1px 5px; */
+}
+
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid navy;
+    /* border-radius: 3%; */
+    box-shadow: 2px 2px 5px black;
+}
+
+div {
+    text-align: center;
+}
+
+#card {
+    display: block;
+}
+
+#contact {
+    background-color: navy;
+    color: white;
+    border-radius: 5%;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.social {
+    height: 35px;
+    width: 35px;
+}

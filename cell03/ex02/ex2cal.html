@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>It's over 9000</title>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="Sus Calculator" />
+    <meta name="keywords" content="HTML,CSS,JavaScript" />
+    <meta name="author" content="thliangs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-image: url('https://c.tenor.com/YQPp9u0iO6wAAAAC/amogus-among-us.gif');
+        }
+        
+        .calculator {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-radius: 1em;
+            height: auto;
+            width: auto;
+            margin: auto;
+            background-color: #191b28;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        
+        .display-box {
+            background-color: #dcdbe1;
+            border: solid black 0.5px;
+            color: black;
+            border-radius: 5px;
+            font-size: 20px;
+            width: 35%;
+            height: 50px;
+        }
+        
+        #btn {
+            background-color: #fb0066;
+        }
+        
+        .selector {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #dcdbe1;
+            border: solid black 0.5px;
+            color: black;
+            border-radius: 5px;
+            font-size: 20px;
+            width: 25%;
+            height: 50px;
+        }
+        
+        .dropbtn {
+            background-color: #3e668e;
+            border-radius: 5px;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 25%;
+            height: 54px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: aquamarine;
+            min-width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            margin: 0;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+            background-color: #204f7d;
+        }
+        
+        .input {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #3e668e;
+            color: white;
+            border: solid black 0.5px;
+            width: 100%;
+            border-radius: 5px;
+            height: 50px;
+            outline: none;
+        }
+        
+        input[type=number] {
+            text-align: right;
+        }
+        
+        .input:active {
+            background: #e5e5e5;
+            -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+            -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+            color: black;
+        }
+        
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        
+        option {
+            text-align: center;
+        }
+        
+        div>div>input {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            background-color: antiquewhite;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        
+        div>div>input:hover {
+            background-color: rgb(218, 149, 59);
+        }
+        
+        div>div>input:active {
+            background-color: rgb(197, 120, 20);
+        }
+    </style>
+    <script>
+        function calculate() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var operator = document.getElementById("operator").value;
+            if (operator == 'Choose') {
+                console.log("Please select and operator");
+                alert("Please select and operator");
+            } else if (parseInt(num1) < 0 || parseInt(num2) < 0) {
+                console.log("Error :(");
+                alert("Error :(");
+            } else if ((operator == '%' || operator == '/') && num2 == '0') {
+                console.log("It's over 9000!");
+                alert("It's over 9000!");
+            } else {
+                var res = eval(num1 + operator + num2);
+                console.log(res);
+                alert(res);
+            }
+        }
+
+        function select_operator(operator) {
+            document.getElementById("operator").value = operator;
+        }
+
+        setTimeout(needy, 30000);
+
+        function needy() {
+            alert("Please, use me...");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="calculator">
+        <h2>ඞ Calculator ඞ</h2>
+        <input class="display-box" type="number" id="num1" />
+        <div class="dropdown">
+            <input type="button" class="dropbtn" value="Choose" id="operator" />
+            <div class="dropdown-content">
+                <input type="button" value="+" onclick="select_operator('+')" />
+                <input type="button" value="-" onclick="select_operator('-')" />
+                <input type="button" value="*" onclick="select_operator('*')" />
+                <input type="button" value="/" onclick="select_operator('/')" />
+                <input type="button" value="%" onclick="select_operator('%')" />
+            </div>
+        </div>
+        <input class="display-box" type="number" id="num2" /><br>
+        <input class="input" type="submit" value="Try Me!" onclick="calculate()">
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>

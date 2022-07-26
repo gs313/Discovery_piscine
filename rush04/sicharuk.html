@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sirapat's Porfolio</title>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="Porfolio" />
+    <meta name="keywords" content="HTML,CSS,JavaScript" />
+    <meta name="author" content="thliangs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="sicharuk.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+
+    <div id="lead" class="parallax">
+        <div id="lead-content">
+            <h1>Sirapat Charukamnertkanok</h1>
+            <h2>
+                <span class="typing"></span>
+            </h2>
+            <a target="_blank" href="https://docs.google.com/document/d/1LD2ccCkY0D3nqLTNvFHkYQV4PwkLN1ej/edit?usp=sharing&ouid=100519070559379338240&rtpof=true&sd=true" class="btn-rounded">View Resume</a>
+        </div>
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <a href="#about">
+                <span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </span>
+            </a>
+        </div>
+    </div>
+
+    <div id="about" class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                    <img src="profile.jpeg" class="profile-pic" />
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        I'm a year 2 Computer Science student who loves boardgame more than anything else!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="education" class="parallax">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>The Chinese University of Hong Kong</h3>
+            <span class="education-date">Sep 2021 - May 2025</span>
+            <h4>Bachelor in Computer Science</h4>
+        </div>
+
+        <div class="education-block">
+            <h3>Mahidol Wittiyanusorn School</h3>
+            <span class="education-date">June 2018 - March 2021</span>
+            <h4>Science and Mathematics Highschool Diploma</h4>
+        </div>
+    </div>
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="night.jpeg" />
+                    </div>
+                    <div class="project-info">
+                        <h3>Photograpic technics</h3>
+                        <p>
+                            Basic camera technics with basic photo composition layout
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="Slide25.jpg" />
+                    </div>
+                    <div class="project-info">
+                        <h3>Image processing of CT Scan Image for Liver Localization</h3>
+                        <p>
+                            By reading Hu value from Liver's CT scan image from liver cancer patient and use RetinaNet model find the pattern of the cancer tissue.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills" class="parallax">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python3</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>html</li>
+            <li>CSS</li>
+            <li>SQL</li>
+            <li>GIT</li>
+            <li>Shell</li>
+        </ul>
+    </div>
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/f/mknydrbo">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2022</span> Sirapat Charukamnertkanok
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <a href="#">
+                        <span id="to-top">
+                                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/gs313" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/sirapat-charukamnertkanok-9027101ab" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/SirapatCharu" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function cal() {
+            var in1 = document.getElementById("in1").value;
+            var in2 = document.getElementById("in2").value;
+            var s = document.getElementById("symbols");
+            var symbol = s.options[s.selectedIndex].value;
+            if (in1 < 0 || in2 < 0) {
+                console.log('Error :(');
+                alert('Error :(');
+            } else if (in2 == '0' && (symbol == '/' || symbol == '%')) {
+                console.log("It's over 9000!");
+                alert("It's over 9000!");
+            } else {
+                var sol = eval(in1 + symbol + in2);
+                console.log(sol);
+                alert(sol);
+            }
+        }
+        const Timeout = setTimeout(theAlert, 30000);
+
+        function theAlert() {
+            alert("Please, use me...");
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <form>
+            <tr>
+                <td><input type="number" id="in1"></td>
+                <td>
+                    <select name="symbols" id="symbols">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select>
+                </td>
+                <td><input type="number" id="in2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="cal()">Try me!</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

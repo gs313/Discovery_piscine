@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cellule3.2</title>
+    <script>
+        let run;
+        window.onload = () => {
+            setTimeout(() => {
+                if (!run) {
+                    alert('Please, use me...');
+                }
+            }, 30 * 1000);
+        }
+
+        function cal() {
+            run = 1;
+            let result;
+            let text;
+            const nb1 = +document.getElementById('number1').value;
+            const nb2 = +document.getElementById('number2').value;
+            const signEl = document.getElementById('sign');
+            const sign = signEl.options[signEl.selectedIndex].value;
+            if (nb1 < 0 || nb2 < 0) {
+                text = 'Error :('
+            } else if (sign === '+') {
+                result = nb1 + nb2
+            } else if (sign === '-') {
+                result = nb1 - nb2
+            } else if (sign === '*') {
+                result = nb1 * nb2
+            } else if (sign === '%' && nb2 === 0) {
+                text = "It's over 9000!";
+            } else if (sign === '/' && nb2 === 0) {
+                text = "It's over 9000!";
+            } else if (sign === '/') {
+                result = nb1 / nb2
+            } else {
+                result = nb1 % nb2
+            }
+            text = result === undefined ? text : `${nb1} ${sign} ${nb2} = ${result}`;
+            console.log(text);
+            alert(text);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" name="number1" id="number1" placeholder="number">
+    <select name="sign" id="sign">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+    <input type="number" name="number2" id="number2" placeholder="number">
+    <button onclick="cal()">Try me!</button>
+</body>
+
+</html>
